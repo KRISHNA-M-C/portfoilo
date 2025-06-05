@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murali Krishna | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        background-color: #f9fafb;
+        color: #1f2937;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .dark-mode {
+        background-color: #0f172a;
+        color: #f1f5f9;
+      }
+
+      header {
+        background-color: #0f172a;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        color: #cbd5e1;
+      }
+
+      nav {
+        background: #ffffff;
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .dark-mode nav {
+        background: #1e293b;
+      }
+
+      nav.scrolled {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      nav a {
+        color: #0f172a;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .dark-mode nav a {
+        color: #f1f5f9;
+      }
+
+      nav a:hover {
+        color: #38bdf8;
+      }
+
+      .toggle-btn {
+        cursor: pointer;
+        background-color: #38bdf8;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: white;
+        font-weight: 600;
+        border-radius: 5px;
+      }
+
+      section {
+        padding: 3rem 2rem;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0f172a;
+      }
+
+      .dark-mode h2 {
+        color: #f8fafc;
+      }
+
+      .skills ul,
+      .projects ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .skills li,
+      .projects li {
+        background: white;
+        border: 1px solid #e2e8f0;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      }
+
+      .dark-mode .skills li,
+      .dark-mode .projects li {
+        background: #1e293b;
+        border-color: #334155;
+        color: #f1f5f9;
+      }
+
+      .contact p {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+      }
+
+      footer {
+        text-align: center;
+        background: #0f172a;
+        color: white;
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Murali Krishna</h1>
+      <p>Electronics & Communication Engineer | Future Tech Innovator</p>
+    </header>
+
+    <nav id="navbar">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a final-year ECE student with a passion for both core electronics and software
+        development. I enjoy building real-world solutions, exploring new technologies,
+        and growing my technical skill set to contribute meaningfully in both hardware
+        and software domains.
+      </p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>C/C++</li>
+        <li>HTML, CSS, JS</li>
+        <li>MATLAB</li>
+        <li>Embedded Systems</li>
+        <li>Microcontrollers (8051, Arduino, ESP32)</li>
+        <li>Data Structures</li>
+        <li>VHDL</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>SIM800L GSM Interface</strong><br />
+          Sent real-time messages using SIM800L and Arduino, helpful in smart alert systems.
+        </li>
+        <li>
+          <strong>Social Media Management Tool</strong><br />
+          A simple tool to help schedule and track posts for student startups.
+        </li>
+        <li>
+          <strong>Weather Station with ESP32</strong><br />
+          Developed a web-based IoT weather station using sensors and ESP32.
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: murali@example.com</p>
+      <p>LinkedIn: linkedin.com/in/murali-krishna</p>
+      <p>GitHub: github.com/muralikrishna</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Murali Krishna. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+
+      window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 0) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+    </script>
+  </body>
+</html>
